@@ -1,0 +1,23 @@
+﻿<catel:UserControl x:Class="Catel.ModelNameProperty.Issue.Views.ItemEditorView"
+                   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+                   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                   xmlns:viewModels="clr-namespace:Catel.ModelNameProperty.Issue.ViewModels"
+                   xmlns:catel="http://catel.codeplex.com"
+                   mc:Ignorable="d" 
+                   d:DesignHeight="300" d:DesignWidth="300"
+                   d:DataContext="{d:DesignInstance Type=viewModels:ItemEditorViewModel}">
+    <Grid>
+        <StackPanel Orientation="Vertical" Width="300" VerticalAlignment="Center">
+            <TextBlock Text="NAME" Margin="0 16 0 6" />
+            <TextBox Width="300" Text="{Binding Item.Name}" />
+            <TextBlock Text="NUMBER" Margin="0 16 0 6" />
+            <TextBox Width="300" Text="{Binding Item.Number}" />
+        </StackPanel>
+        
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="24">
+            <Button Command="{Binding ApplyCommand}" Content="Apply" />
+        </StackPanel>
+    </Grid>
+</catel:UserControl>
